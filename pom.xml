@@ -2,14 +2,14 @@
 
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>modules</artifactId>
+    <artifactId>motech-openlmis</artifactId>
     <groupId>org.motechproject</groupId>
     <version>1.0-SNAPSHOT</version>
     <packaging>pom</packaging>
     <name>MOTECH OpenLMIS Demo</name>
 
     <description>
-        MOTECH is a software system from Grameen Foundation that harnesses the ubiquity of mobile phones to deliver and receive information from patient and caregivers.
+        Proof of concept project that demonstrates building the OpenLMIS core data model on top of MOTECH.
     </description>
 
     <properties>

@@ -13,100 +13,148 @@ public class Product {
     @Field
     private String alternateItemCode;
 
+    @Field
     private String manufacturer;
 
+    @Field
     private String manufacturerCode;
 
+    @Field
     private String manufacturerBarCode;
 
+    @Field
     private String mohBarCode;
 
+    @Field
     private String gtin;
 
+    @Field
     private String type;
 
+    @Field
     private String primaryName;
 
+    @Field
     private String fullName;
 
+    @Field
     private String genericName;
 
+    @Field
     private String alternateName;
 
+    @Field
     private String description;
 
+    @Field
     private String strength;
 
+    @Field
     private ProductForm form;
 
+    @Field
     private Long formId;
 
+    @Field
     private ProductGroup productGroup;
 
+    @Field
     private Long productGroupId;
 
+    @Field
     private DosageUnit dosageUnit;
 
+    @Field
     private Long dosageUnitId;
 
+    @Field
     private String dispensingUnit;
 
+    @Field
     private Integer dosesPerDispensingUnit;
 
+    @Field
     private Boolean storeRefrigerated;
 
+    @Field
     private Boolean storeRoomTemperature;
 
+    @Field
     private Boolean hazardous;
 
+    @Field
     private Boolean flammable;
 
+    @Field
     private Boolean controlledSubstance;
 
+    @Field
     private Boolean lightSensitive;
 
+    @Field
     private Boolean approvedByWHO;
 
+    @Field
     private Double contraceptiveCYP;
 
+    @Field
     private Integer packSize;
 
+    @Field
     private Integer alternatePackSize;
 
+    @Field
     private Double packLength;
 
+    @Field
     private Double packWidth;
 
+    @Field
     private Double packHeight;
 
+    @Field
     private Double packWeight;
 
+    @Field
     private Integer packsPerCarton;
 
+    @Field
     private Double cartonLength;
 
+    @Field
     private Double cartonWidth;
 
+    @Field
     private Double cartonHeight;
 
+    @Field
     private Integer cartonsPerPallet;
 
+    @Field
     private Integer expectedShelfLife;
 
+    @Field
     private String specialStorageInstructions;
 
+    @Field
     private String specialTransportInstructions;
 
+    @Field
     private Boolean active;
 
+    @Field
     private Boolean fullSupply;
 
+    @Field
     private Boolean tracer;
 
+    @Field
     private Integer packRoundingThreshold;
 
+    @Field
     private Boolean roundToZero;
 
+    @Field
     private Boolean archived;
 
     public void validate() {

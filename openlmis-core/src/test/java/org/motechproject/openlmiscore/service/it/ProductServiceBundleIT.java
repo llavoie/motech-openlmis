@@ -1,5 +1,6 @@
 package org.motechproject.openlmiscore.service.it;
 
+import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.motechproject.openlmiscore.domain.Product;
@@ -26,6 +27,11 @@ public class ProductServiceBundleIT extends BasePaxIT {
 
     @Inject
     private ProductDataService productDataService;
+
+    @Before
+    public void setUp() {
+        productDataService.deleteAll();
+    }
 
     @Test
     public void testCreateProduct() {

@@ -101,7 +101,7 @@ public class Program {
         this.description = description;
     }
 
-    public Boolean isActive() {
+    public Boolean getActive() {
         return active;
     }
 
@@ -109,7 +109,7 @@ public class Program {
         this.active = active;
     }
 
-    public Boolean isBudgetingApplies() {
+    public Boolean getBudgetingApplies() {
         return budgetingApplies;
     }
 
@@ -117,7 +117,7 @@ public class Program {
         this.budgetingApplies = budgetingApplies;
     }
 
-    public Boolean isTemplateConfigured() {
+    public Boolean getTemplateConfigured() {
         return templateConfigured;
     }
 
@@ -125,7 +125,7 @@ public class Program {
         this.templateConfigured = templateConfigured;
     }
 
-    public Boolean isRegimenTemplateConfigured() {
+    public Boolean getRegimenTemplateConfigured() {
         return regimenTemplateConfigured;
     }
 
@@ -133,7 +133,7 @@ public class Program {
         this.regimenTemplateConfigured = regimenTemplateConfigured;
     }
 
-    public Boolean isPush() {
+    public Boolean getPush() {
         return push;
     }
 
@@ -141,7 +141,7 @@ public class Program {
         this.push = push;
     }
 
-    public Boolean isEquipmentConfigured() {
+    public Boolean getIsEquipmentConfigured() {
         return isEquipmentConfigured;
     }
 
@@ -149,7 +149,7 @@ public class Program {
         this.isEquipmentConfigured = isEquipmentConfigured;
     }
 
-    public Boolean isEnableSkipPeriod() {
+    public Boolean getEnableSkipPeriod() {
         return enableSkipPeriod;
     }
 
@@ -157,7 +157,7 @@ public class Program {
         this.enableSkipPeriod = enableSkipPeriod;
     }
 
-    public Boolean isShowNonFullSupplyTab() {
+    public Boolean getShowNonFullSupplyTab() {
         return showNonFullSupplyTab;
     }
 
@@ -165,7 +165,7 @@ public class Program {
         this.showNonFullSupplyTab = showNonFullSupplyTab;
     }
 
-    public Boolean isHideSkippedProducts() {
+    public Boolean getHideSkippedProducts() {
         return hideSkippedProducts;
     }
 
@@ -173,7 +173,7 @@ public class Program {
         this.hideSkippedProducts = hideSkippedProducts;
     }
 
-    public Boolean isEnableIvdForm() {
+    public Boolean getEnableIvdForm() {
         return enableIvdForm;
     }
 
@@ -181,7 +181,7 @@ public class Program {
         this.enableIvdForm = enableIvdForm;
     }
 
-    public Boolean isUsePriceSchedule() {
+    public Boolean getUsePriceSchedule() {
         return usePriceSchedule;
     }
 

@@ -17,6 +17,22 @@ public class DeliveryZoneMember {
         this.facility = facility;
     }
 
+    public DeliveryZone getDeliveryZone() {
+        return deliveryZone;
+    }
+
+    public void setDeliveryZone(DeliveryZone deliveryZone) {
+        this.deliveryZone = deliveryZone;
+    }
+
+    public Facility getFacility() {
+        return facility;
+    }
+
+    public void setFacility(Facility facility) {
+        this.facility = facility;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o) {

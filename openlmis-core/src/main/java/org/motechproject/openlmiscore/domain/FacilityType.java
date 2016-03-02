@@ -36,13 +36,77 @@ public class FacilityType {
 
     @Field
     @NotNull
-    private boolean active;
+    private Boolean active;
 
     public FacilityType() {
     }
 
     public FacilityType(String code) {
         this.code = code;
+    }
+
+    public String getCode() {
+        return code;
+    }
+
+    public void setCode(String code) {
+        this.code = code;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public String getDescription() {
+        return description;
+    }
+
+    public void setDescription(String description) {
+        this.description = description;
+    }
+
+    public Integer getLevelId() {
+        return levelId;
+    }
+
+    public void setLevelId(Integer levelId) {
+        this.levelId = levelId;
+    }
+
+    public Integer getNominalMaxMonth() {
+        return nominalMaxMonth;
+    }
+
+    public void setNominalMaxMonth(Integer nominalMaxMonth) {
+        this.nominalMaxMonth = nominalMaxMonth;
+    }
+
+    public Double getNominalEop() {
+        return nominalEop;
+    }
+
+    public void setNominalEop(Double nominalEop) {
+        this.nominalEop = nominalEop;
+    }
+
+    public Integer getDisplayOrder() {
+        return displayOrder;
+    }
+
+    public void setDisplayOrder(Integer displayOrder) {
+        this.displayOrder = displayOrder;
+    }
+
+    public Boolean getActive() {
+        return active;
+    }
+
+    public void setActive(boolean active) {
+        this.active = active;
     }
 
     @Override //NO CHECKSTYLE CyclomaticComplexity

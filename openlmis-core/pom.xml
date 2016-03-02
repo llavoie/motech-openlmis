@@ -26,19 +26,8 @@
         </dependency>
         <dependency>
             <groupId>org.motechproject</groupId>
-            <artifactId>motech-scheduler</artifactId>
-            <version>${motech.version}</version>
-        </dependency>
-        <dependency>
-            <groupId>org.motechproject</groupId>
             <artifactId>motech-platform-dataservices</artifactId>
             <version>${motech.version}</version>
-        </dependency>
-        <dependency>
-            <groupId>${motech.groupId}</groupId>
-            <artifactId>motech-tasks</artifactId>
-            <version>${motech.version}</version>
-            <optional>true</optional>
         </dependency>
     </dependencies>
 
@@ -55,6 +44,7 @@
                         <Resource-Path>openlmiscore/resources</Resource-Path>
                         <Export-Package>
                             org.motechproject.openlmiscore.service;version=${project.version},
+                            org.motechproject.openlmiscore.service.impl;version=${project.version},
                             org.motechproject.openlmiscore.domain;version=${project.version},
                             org.motechproject.openlmiscore.exception;version=${project.version},
                             org.motechproject.openlmiscore.repository;version=${project.version},

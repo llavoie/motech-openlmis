@@ -346,7 +346,7 @@ public class Product {
         this.dosesPerDispensingUnit = dosesPerDispensingUnit;
     }
 
-    public Boolean isStoreRefrigerated() {
+    public Boolean getStoreRefrigerated() {
         return storeRefrigerated;
     }
 
@@ -354,7 +354,7 @@ public class Product {
         this.storeRefrigerated = storeRefrigerated;
     }
 
-    public Boolean isStoreRoomTemperature() {
+    public Boolean getStoreRoomTemperature() {
         return storeRoomTemperature;
     }
 
@@ -362,7 +362,7 @@ public class Product {
         this.storeRoomTemperature = storeRoomTemperature;
     }
 
-    public Boolean isHazardous() {
+    public Boolean getHazardous() {
         return hazardous;
     }
 
@@ -370,7 +370,7 @@ public class Product {
         this.hazardous = hazardous;
     }
 
-    public Boolean isFlammable() {
+    public Boolean getFlammable() {
         return flammable;
     }
 
@@ -378,7 +378,7 @@ public class Product {
         this.flammable = flammable;
     }
 
-    public Boolean isControlledSubstance() {
+    public Boolean getControlledSubstance() {
         return controlledSubstance;
     }
 
@@ -386,7 +386,7 @@ public class Product {
         this.controlledSubstance = controlledSubstance;
     }
 
-    public Boolean isLightSensitive() {
+    public Boolean getLightSensitive() {
         return lightSensitive;
     }
 
@@ -394,7 +394,7 @@ public class Product {
         this.lightSensitive = lightSensitive;
     }
 
-    public Boolean isApprovedByWHO() {
+    public Boolean getApprovedByWHO() {
         return approvedByWHO;
     }
 
@@ -522,7 +522,7 @@ public class Product {
         this.specialTransportInstructions = specialTransportInstructions;
     }
 
-    public Boolean isActive() {
+    public Boolean getActive() {
         return active;
     }
 
@@ -530,7 +530,7 @@ public class Product {
         this.active = active;
     }
 
-    public Boolean isFullSupply() {
+    public Boolean getFullSupply() {
         return fullSupply;
     }
 
@@ -538,7 +538,7 @@ public class Product {
         this.fullSupply = fullSupply;
     }
 
-    public Boolean isTracer() {
+    public Boolean getTracer() {
         return tracer;
     }
 
@@ -554,7 +554,7 @@ public class Product {
         this.packRoundingThreshold = packRoundingThreshold;
     }
 
-    public Boolean isRoundToZero() {
+    public Boolean getRoundToZero() {
         return roundToZero;
     }
 
@@ -562,7 +562,7 @@ public class Product {
         this.roundToZero = roundToZero;
     }
 
-    public Boolean isArchived() {
+    public Boolean getArchived() {
         return archived;
     }
 

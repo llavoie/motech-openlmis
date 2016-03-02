@@ -12,12 +12,17 @@ import java.util.List;
 @Service("productService")
 public class ProductServiceImpl implements ProductService {
 
-    @Autowired
     private ProductDataService productDataService;
+
+    @Autowired
+    public ProductServiceImpl(ProductDataService productDataService) {
+        this.productDataService = productDataService;
+    }
 
     @Override
     public void save(Product product) {
-
+        product.validate();
+        productDataService.create(product);
     }
 
     @Override
@@ -40,7 +45,7 @@ public class ProductServiceImpl implements ProductService {
         if (product == null) {
             return false;
         }
-        return product.isActive();
+        return product.getActive();
     }
 
     @Override

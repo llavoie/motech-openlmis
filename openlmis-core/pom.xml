@@ -55,6 +55,9 @@
                         <Resource-Path>openlmiscore/resources</Resource-Path>
                         <Export-Package>
                             org.motechproject.openlmiscore.service;version=${project.version},
+                            org.motechproject.openlmiscore.domain;version=${project.version},
+                            org.motechproject.openlmiscore.exception;version=${project.version},
+                            org.motechproject.openlmiscore.repository;version=${project.version},
                         </Export-Package>
                         <Import-Package>
                             *

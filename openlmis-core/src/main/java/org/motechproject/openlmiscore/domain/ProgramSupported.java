@@ -5,7 +5,6 @@ import org.motechproject.mds.annotations.Field;
 import org.motechproject.mds.annotations.Ignore;
 import org.motechproject.openlmiscore.exception.DataException;
 
-import javax.validation.constraints.NotNull;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
@@ -21,15 +20,12 @@ public class ProgramSupported {
     private Long facilityId;
 
     @Field
-    @NotNull
     private Program program;
 
     @Field
-    @NotNull
     private String facilityCode;
 
     @Field
-    @NotNull
     private Boolean active = false;
 
     @Field
@@ -38,6 +34,7 @@ public class ProgramSupported {
     @Field
     private List<FacilityProgramProduct> programProducts;
 
+    @Ignore
     public void isValid() {
         if (this.active && this.startDate == null) {
             throw new DataException("supported.programs.invalid");

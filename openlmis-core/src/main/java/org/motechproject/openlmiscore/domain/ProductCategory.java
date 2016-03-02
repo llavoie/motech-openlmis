@@ -1,9 +1,11 @@
 package org.motechproject.openlmiscore.domain;
 
+import org.motechproject.mds.annotations.Entity;
 import org.motechproject.mds.annotations.Field;
 
 import javax.validation.constraints.NotNull;
 
+@Entity
 public class ProductCategory {
 
     @Field

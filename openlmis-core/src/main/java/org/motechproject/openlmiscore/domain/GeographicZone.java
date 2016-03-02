@@ -2,7 +2,6 @@ package org.motechproject.openlmiscore.domain;
 
 import org.motechproject.mds.annotations.Entity;
 import org.motechproject.mds.annotations.Field;
-import org.motechproject.mds.annotations.Ignore;
 import org.motechproject.openlmiscore.exception.DataException;
 
 import javax.validation.constraints.NotNull;
@@ -20,10 +19,6 @@ public class GeographicZone {
     private String name;
 
     @Field
-    @NotNull
-    private GeographicLevel level;
-
-    @Field
     private GeographicZone parent;
 
     @Field
@@ -35,17 +30,15 @@ public class GeographicZone {
     @Field
     private Double longitude;
 
-    public GeographicZone(String code, String name, GeographicLevel level, GeographicZone parent) {
+    public GeographicZone(String code, String name, GeographicZone parent) {
         this.code = code;
         this.name = name;
-        this.level = level;
         this.parent = parent;
     }
 
-    public GeographicZone(String code, String name, GeographicLevel level, GeographicZone parent, Long catchmentPopulation, Double latitude, Double longitude) {
+    public GeographicZone(String code, String name, GeographicZone parent, Long catchmentPopulation, Double latitude, Double longitude) {
         this.code = code;
         this.name = name;
-        this.level = level;
         this.parent = parent;
         this.catchmentPopulation = catchmentPopulation;
         this.latitude = latitude;
@@ -66,14 +59,6 @@ public class GeographicZone {
 
     public void setName(String name) {
         this.name = name;
-    }
-
-    public GeographicLevel getLevel() {
-        return level;
-    }
-
-    public void setLevel(GeographicLevel level) {
-        this.level = level;
     }
 
     public GeographicZone getParent() {
@@ -108,43 +93,10 @@ public class GeographicZone {
         this.longitude = longitude;
     }
 
-    @Ignore
-    public boolean isParentHigherInHierarchy() {
-        return level.isLowerInHierarchyThan(parent.getLevel());
-    }
-
-    @Ignore
-    public boolean isRootLevel() {
-        return level.isRootLevel();
-    }
-
-    public void validateLevel() {
-        if (this.getLevel() == null) {
-            throw new DataException("error.geo.level.invalid");
-        }
-
-        validateLevelAndParentAssociation();
-    }
-
-    public void validateParentIsHigherInHierarchy() {
-        if (!this.isParentHigherInHierarchy()) {
-            throw new DataException("error.invalid.hierarchy");
-        }
-    }
 
     public void validateParentExists() {
         if (parent == null) {
             throw new DataException("error.geo.zone.parent.invalid");
-        }
-    }
-
-    private void validateLevelAndParentAssociation() {
-        if (this.parent == null && !this.isRootLevel()) {
-            throw new DataException("error.invalid.hierarchy");
-        }
-
-        if (this.parent != null && this.isRootLevel()) {
-            throw new DataException("error.invalid.hierarchy");
         }
     }
 
@@ -171,9 +123,6 @@ public class GeographicZone {
         if (!name.equals(that.name)) {
             return false;
         }
-        if (!level.equals(that.level)) {
-            return false;
-        }
         if (parent != null ? !parent.equals(that.parent) : that.parent != null) {
             return false;
         }
@@ -191,11 +140,12 @@ public class GeographicZone {
     public int hashCode() {
         int result = code.hashCode();
         result = 31 * result + name.hashCode();
-        result = 31 * result + level.hashCode();
         result = 31 * result + (parent != null ? parent.hashCode() : 0);
         result = 31 * result + (catchmentPopulation != null ? catchmentPopulation.hashCode() : 0);
         result = 31 * result + (latitude != null ? latitude.hashCode() : 0);
         result = 31 * result + (longitude != null ? longitude.hashCode() : 0);
         return result;
     }
+
+    //TODO: add back GeographicLevel
 }

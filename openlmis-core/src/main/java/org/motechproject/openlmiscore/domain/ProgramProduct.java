@@ -43,7 +43,7 @@ public class ProgramProduct {
     private ProgramProductIdealStockAmount programProductIdealStockAmount;
 
     @Field
-    private Money currentPrice;
+    private Double currentPrice;
 
     public ProgramProduct(Program program, Product product, Integer dosesPerMonth, Boolean active) {
         this.program = program;
@@ -52,7 +52,7 @@ public class ProgramProduct {
         this.active = active;
     }
 
-    public ProgramProduct(Program program, Product product, Integer dosesPerMonth, Boolean active, Money currentPrice) {
+    public ProgramProduct(Program program, Product product, Integer dosesPerMonth, Boolean active, Double currentPrice) {
         this.program = program;
         this.product = product;
         this.dosesPerMonth = dosesPerMonth;
@@ -143,16 +143,16 @@ public class ProgramProduct {
         this.programProductIdealStockAmount = programProductIdealStockAmount;
     }
 
-    public Money getCurrentPrice() {
+    public Double getCurrentPrice() {
         return currentPrice;
     }
 
-    public void setCurrentPrice(Money currentPrice) {
+    public void setCurrentPrice(Double currentPrice) {
         this.currentPrice = currentPrice;
     }
 
     public void validate() {
-        if (currentPrice.isNegative()) {
+        if (currentPrice < 0) {
             throw new DataException("programProduct.invalid.current.price");
         }
     }

@@ -441,24 +441,29 @@ public class Facility extends MdsEntity {
         return result;
     }
 
+    @Ignore
     public Facility basicInformation() {
         return new Facility(facilityId, code, name, operatedBy, geographicZone, facilityType, virtualFacility);
     }
 
+    @Ignore
     public static Facility createFacilityToBeDeleted(Long facilityId, Long modifiedBy) {
         return new Facility(facilityId, false, false, modifiedBy);
     }
 
+    @Ignore
     public static Facility createFacilityToBeRestored(Long facilityId, Long modifiedBy) {
         return new Facility(facilityId, true, false, modifiedBy);
     }
 
+    @Ignore
     public void validate() {
         for (ProgramSupported programSupported : programsSupported) {
             programSupported.isValid();
         }
     }
 
+    @Ignore
     public boolean isValid(Facility parentFacility) {
         if (parentFacility == null) {
             return active && enabled;
@@ -467,13 +472,11 @@ public class Facility extends MdsEntity {
         return active && enabled && parentFacility.active && parentFacility.enabled;
     }
 
-    @SuppressWarnings("unused")
     @Ignore
     public String getStringGoLiveDate() throws ParseException {
         return this.goLiveDate == null ? null : new SimpleDateFormat("dd-MM-yyyy").format(this.goLiveDate);
     }
 
-    @SuppressWarnings("unused")
     @Ignore
     public String getStringGoDownDate() throws ParseException {
         return this.goDownDate == null ? null : new SimpleDateFormat("dd-MM-yyyy").format(this.goDownDate);
@@ -484,6 +487,7 @@ public class Facility extends MdsEntity {
         return this.getProgramsSupported().get(0).getWhoRatioFor(productCode);
     }
 
+    @Ignore
     public static List<Facility> filterForActiveProducts(List<Facility> facilities) {
         for (Facility facility : facilities) {
             for (ProgramSupported programSupported : facility.getProgramsSupported()) {
